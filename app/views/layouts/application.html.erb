@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bien Reviews - the best restaurants in the world</title>
+    <title><%= content_for :page_title %> - Bien Reviews - the best restaurants in the world</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,18 +11,21 @@
 
   <body>
     <header>
-      <h1>
-        <%= link_to root_path do %>
-          <%= image_tag bien-logo.svg" %>
-        <% end %>
-      </h1>
-      <h2>The best restaurants in the world</h2>
+      <nav>
+        <h1>
+          <%= link_to root_path do %>
+            <%= image_tag "bien-logo.svg" %>
+          <% end %>
+        </h1>
+      </nav>
       <nav>
         <%= link_to "Add a review", new_review_path %>
       </nav>
     </header>
 
-    <%= yield %>
+    <main>
+      <%= yield %>
+    </main>
 
     <footer>
       Copyright 2021 Bien Reviews
