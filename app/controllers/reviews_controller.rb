@@ -7,7 +7,7 @@ class ReviewsController < ApplicationController
     @location = params[:location]
 
     #start with all reviews
-    @review = Review.all
+    @reviews = Review.all
 
     # filtering by price
     if @price.present?
@@ -78,7 +78,7 @@ class ReviewsController < ApplicationController
 
   def form_params
     params.require(:review).permit(:title, :restaurant, :body, :score,
-      :ambiance, :cuisine, :price, :address)
+      :ambiance, :address)
   end
 
 end
