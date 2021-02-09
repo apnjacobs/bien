@@ -6,6 +6,7 @@ class CommentsController < ApplicationController
     @comment = @review.comments.new(params.require(:comment).permit(:body))
 
     @comment.save
+  end
 
     redirect_to review_path(@review)
 
