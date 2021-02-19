@@ -111,6 +111,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.11.1-x86_64-linux)
       racc (~> 1.4)
+    obscenity (1.0.2)
     pg (1.2.3)
     profanity-filter (1.0)
       webpurify
@@ -225,6 +226,7 @@ DEPENDENCIES
   geocoder
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  obscenity
   pg
   profanity-filter (~> 1.0)
   puma (~> 5.0)
